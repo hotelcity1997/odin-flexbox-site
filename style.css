@@ -6,7 +6,7 @@
 }
 */
 
-p, h1 {
+p, h1, h2, h3 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -14,12 +14,15 @@ p, h1 {
 
 
 
-.hero-info-text p {
+p {
   color: #E5E7EB;
   font-size: 18px;
-  margin-top: 6px;
+  margin: 0;
   margin-bottom: 12px;
-  width: 375px;
+}
+
+.cta-text-container p {
+  margin: 0;
 }
 
 h1 {
@@ -32,6 +35,12 @@ h2 {
   font-weight: 900;
   font-size: 32px;
   color: #1F2937;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 26px;
+  color: #F9FAF8;
 }
 
 body {
@@ -58,8 +67,9 @@ body {
 
 .hero {
   display: flex;
+  flex: 1;
   background: #1F2937;
-  height: 450px;
+  min-height: 450px;
   align-items: center;
   justify-content: center;
 }
@@ -74,12 +84,15 @@ body {
   flex: 0 1 auto;
   justify-content: space-between;
   width: 900px;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 30px;
 
 }
 
 .hero-info-text {
+  flex: 1;
   justify-content: left;
-  width: 300px;
 }
 
 .hero-image {
@@ -92,12 +105,8 @@ body {
   justify-content: center;
 }
 
-.hero-image p {
-  color: white;
-}
-
 .info {
-  min-height: 450px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -168,12 +177,53 @@ body {
   
 }
 
-.call-to-action {
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
 
+.cta-content {
+  display: flex;
+  flex: 1 1 auto;
+  background-color: #3882F6;
+  max-width: 700px;
+  min-height: 120px;
+  border-radius: 5px;
+  align-items: center;
+  padding: 0 100px;
+  flex-wrap: wrap;
+}
+
+.cta-text-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.cta-text-container p {
+  margin-top: 0;
+  color: white;
+}
+
+#cta-button {
+  background-color: #3882F6;
+  color: #F9FAF8;
+  padding: 7px 26px;
+  font-family: 'Roboto';
+  font-weight: 900;
+  border: 2px solid white;
+  font-size: 16px;
 }
 
 .footer {
-
+  display: flex;
+  min-height: 100px;
+  background-color: #1F2937;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
@@ -211,5 +261,6 @@ button {
   font-weight: 900;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
 }
 
